@@ -1,0 +1,15 @@
+web:
+  image: castorinop/docker-owncloud
+  build: .
+  links:
+   - db
+  ports:
+   - "8001:80"
+  volumes:
+          - owncloud/:/media/owncloud
+db:
+  image: castorinop/mysql
+  volumes:
+    - db/
+
+    
