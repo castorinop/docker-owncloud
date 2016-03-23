@@ -32,7 +32,7 @@ if [ ! "`php /app/owncloud/occ config:system:get installed`" == "false" ]; then
  php occ config:system:set filelocking.enabled --value='true'
  php occ config:system:set memcache.local --value='\OC\Memcache\APCu'
 
-chown apache:apache /app/owncloud/ -R
+ chown apache:apache /app/owncloud/ -R &
 fi
 
 touch /var/log/httpd/access_log
