@@ -1,6 +1,5 @@
 web:
-  image: castorinop/docker-owncloud
-  build: .
+  image: castorinop/owncloud
   links:
    - db
   ports:
